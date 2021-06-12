@@ -18,6 +18,8 @@ body {
     position : absolute ;
     animation : ret 1s linear forwards;
     border-radius: 50%;
+    background-color: rgba(0, 0, 0, .03);
+
 }
 @keyframes ret {
     0% {
@@ -28,6 +30,8 @@ body {
     }
     40% {
         border: rgb(0, 255, 0)  solid;
+        background-color: rgba(0, 0, 0, .0);
+
     }
     60% {
         border: rgb(0, 255, 255)  solid;
@@ -38,7 +42,7 @@ body {
 
     100% {
         border: rgb(255, 0, 0) solid;
-
+        background-color: rgba(0, 0, 0, .0);
         width: 0;
         height: 0;
     }
