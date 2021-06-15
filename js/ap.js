@@ -5,16 +5,28 @@ const COULEUR_PREVIEW = document.querySelector('.colorbutton')
 const BURGER = document.querySelector('.burger-menu')
 const PARAM = document.querySelector('.settings')
 const TRAIT = document.querySelector('#trait')
+ 
 
-document.addEventListener('mousemove', (e)=> {
-    const ROND = document.createElement('div')
-    ROND.classList.add('rond')
-    document.querySelector('body').append(ROND)
+COULEUR.addEventListener('change',()=>{
     if (COULEUR.value == 'Multicolor')
     {
         
         COULEUR_PREVIEW.style.background = ''
         COULEUR_PREVIEW.style.backgroundImage = 'url("img/multicolor.jpg")'
+    }
+    else {
+         COULEUR_PREVIEW.style.background = COULEUR.value
+         COULEUR_PREVIEW.style.backgroundImage = ''
+    }
+   
+
+})
+
+document.addEventListener('mousemove', (e)=> {
+    const ROND = document.createElement('div')
+    ROND.classList.add('rond')
+    document.querySelector('body').append(ROND)
+    
         if(TRAIT.value == 'solid')
         {
             ROND.setAttribute('style', `top : ${e.pageY}px; left : ${e.pageX}px; animation : multicolorP ${TAILLE.value}0ms linear forwards;`)
@@ -49,7 +61,6 @@ document.addEventListener('mousemove', (e)=> {
     }
     else {
         ROND.setAttribute('style', `top : ${e.pageY}px; left : ${e.pageX}px; animation : ret ${TAILLE.value}0ms linear forwards; border: ${TRAIT.value} ${COULEUR.value};`)
-        COULEUR_PREVIEW.style.background = COULEUR.value
     }
       setTimeout(() => {
         ROND.remove()
@@ -60,11 +71,6 @@ document.addEventListener('touchmove',(e)=> {
     const ROND = document.createElement('div')
     ROND.classList.add('rond')
     document.querySelector('body').append(ROND)
-    if (COULEUR.value == 'Multicolor')
-    {
-
-        COULEUR_PREVIEW.style.background = ''
-        COULEUR_PREVIEW.style.backgroundImage = 'url("img/multicolor.jpg")'
         if(TRAIT.value == 'solid')
         {
             ROND.setAttribute('style', `top : ${e.targetTouches[0].pageY}px; left : ${e.targetTouches[0].pageX}px; animation : multicolorP ${TAILLE.value}0ms linear forwards;`)
@@ -100,7 +106,6 @@ document.addEventListener('touchmove',(e)=> {
     }
     else {
         ROND.setAttribute('style', `top : ${e.targetTouches[0].pageY}px; left : ${e.targetTouches[0].pageX}px; animation : ret ${TAILLE.value}0ms linear forwards; border: ${TRAIT.value} ${COULEUR.value};`)
-        COULEUR_PREVIEW.style.background = COULEUR.value
     }
       setTimeout(() => {
         ROND.remove()
