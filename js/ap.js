@@ -109,10 +109,10 @@ document.addEventListener('touchmove',(e)=> {
 })
 
 BURGER.addEventListener('click',()=> {
-    if(PARAM.style.transform == 'translateX(25vw)'){
+    if(PARAM.style.transform == 'translateX(100%)'){
         PARAM.style.transform = 'translateX(0vw)'
     }
     else{
-        PARAM.style.transform = 'translateX(25vw)'
+        PARAM.style.transform = 'translateX(100%)'
     }
 })
