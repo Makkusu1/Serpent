@@ -1,4 +1,3 @@
-
 const TAILLE = document.querySelector('#taille')
 const COULEUR = document.querySelector('#couleur')
 const COULEUR_PREVIEW = document.querySelector('.colorbutton')
@@ -84,6 +83,8 @@ document.addEventListener('touchmove',(e)=> {
     const ROND = document.createElement('div')
     ROND.classList.add('rond')
     document.querySelector('body').append(ROND)
+    if (COULEUR.value == 'Multicolor')
+    {
         if(TRAIT.value == 'solid')
         {
             ROND.setAttribute('style', `top : ${e.targetTouches[0].pageY}px; left : ${e.targetTouches[0].pageX}px; animation : multicolorP ${TAILLE.value}0ms linear forwards;`)
