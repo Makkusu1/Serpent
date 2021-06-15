@@ -26,7 +26,8 @@ document.addEventListener('mousemove', (e)=> {
     const ROND = document.createElement('div')
     ROND.classList.add('rond')
     document.querySelector('body').append(ROND)
-    
+     if (COULEUR.value == 'Multicolor')
+    {
         if(TRAIT.value == 'solid')
         {
             ROND.setAttribute('style', `top : ${e.pageY}px; left : ${e.pageX}px; animation : multicolorP ${TAILLE.value}0ms linear forwards;`)
