@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/ap.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, max-scale=1.0">
+    <title>Serpent</title>
+</head>
+<body>
+<button class="burger-menu">
+    <span class="bar a"></span>
+    <span class="bar b"></span>
+    <span class="bar c"></span>
+</button>
+<div class="settings">
+    <h1>Paramètres du Serpent : </h1>
+    <nav>
+        <ul>
+            <li>
+               <label for="couleur">Couleur : </label><select name="couleur" id="couleur">
+                    <option value="Multicolor">Multicolor</option>
+                    <option value="rgb(255, 0 , 0)">Rouge</option>
+                    <option value="rgb(127.5, 0 , 0)">Rouge Foncé</option>
+                    <option value="rgb(255, 127.5 , 127.5)">Rouge Clair</option>
+                    <option value="rgb(255, 255 , 0)">Jaune</option>
+                    <option value="rgb(127.5, 127.5 , 0)">Jaune Foncé</option>
+                    <option value="rgb(255, 255 , 127.5)">Jaune Clair</option>
+                    <option value="rgb(0, 255, 0)">Vert</option>
+                    <option value="rgb(0, 127.5 , 0)">Vert Foncé</option>
+                    <option value="rgb(127.5, 255 , 127.5)">Vert Clair</option>
+                    <option value="rgb(0, 255,255)">Bleu Ciel</option>
+                    <option value="rgb(0, 127.5, 127.5 )">Bleu Ciel Foncé</option>
+                    <option value="rgb(127.5 , 255, 255)">Bleu Ciel Clair</option>
+                    <option value="rgb(0, 0,255)">Bleu</option>
+                    <option value="rgb(0, 0, 127.5 )">Bleu Foncé</option>
+                    <option value="rgb(127.5 , 127.5, 255)">Bleu Clair</option>
+                    <option value="rgb(255, 0,255)">Rose</option>
+                    <option value="rgb(127.5 , 0, 127.5 )">Rose Foncé</option>
+                    <option value="rgb(255 , 127.5, 255)">Rose Clair</option>
+                </select></p><button class="colorbutton"></button>
+            </li>
+            <li>
+                <label for="taille"> Taille : </label><input type="range" name="taille" id="taille" min="20" max="200">
+            </li>
+            <li>
+               <label for="trait">Trait :</label>  <select name="trait" id="trait">
+                <option value="solid">Plein</option>
+                <option value="solid 6px">Plein Gras</option>
+                <option value="solid 1.5px">Plein Fin</option>
+
+                <option value="dashed">Pointillés</option>
+                <option value="dashed 6px">Pointillés Gras</option>
+                <option value="dashed 1.5px">Pointillés Fin</option>
+               </select>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
