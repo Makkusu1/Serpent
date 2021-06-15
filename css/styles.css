@@ -301,3 +301,37 @@ select {
         height: 0;
     }
 }
+@media (max-width : 1010px) {
+    :root {
+        font-size: 7px;
+    }
+}
+@media (max-width : 870px) {
+    :root {
+        font-size: 5px;
+    }
+}
+@media (max-width : 750px) {
+.settings{
+    width: 35vw;
+    left: 0;
+}
+@media (max-width : 550px) {
+    .settings{
+        width: 50vw;
+        left: 0;
+    }
+    @media (max-width : 400px) {
+        .settings{
+            width: 70vw;
+            left: 0;
+        }
+        @media (max-width : 300px) {
+            .settings{
+                width: 100vw;
+                left: 0;
+            }
+            
+    
+
+}
