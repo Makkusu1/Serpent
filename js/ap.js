@@ -6,6 +6,18 @@ const BURGER = document.querySelector('.burger-menu')
 const PARAM = document.querySelector('.settings')
 const TRAIT = document.querySelector('#trait')
  
+window.addEventListener('load',()=> {
+    if (COULEUR.value == 'Multicolor')
+    {
+    COULEUR_PREVIEW.style.background = ''
+    COULEUR_PREVIEW.style.backgroundImage = 'url("img/multicolor.jpg")'
+    }
+    else {
+        COULEUR_PREVIEW.style.background = COULEUR.value
+
+    }
+
+})
 
 COULEUR.addEventListener('change',()=>{
     if (COULEUR.value == 'Multicolor')
